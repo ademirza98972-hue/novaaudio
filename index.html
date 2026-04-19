@@ -237,7 +237,7 @@ let bypassOn=false,preBspd=1,preBpit=0;
 let player=null,pitchShift=null,gainNode=null;
 let audioBuffer=null,isPlaying=false;
 let pTimer=null,startedAt=0,pausedAt=0;
-let rawBuf=null,waveData=null,seekDrag=false;
+let rawBuf=null,waveData=null,seekDrag=false,origFileName='';
 
 const playBtn=document.getElementById('playBtn');
 const wrapEl=document.getElementById('waveWrap');
@@ -419,7 +419,8 @@ async function doExport(){
     bar.style.width='92%';
     const ext=fmt==='wav'?'wav':'mp3';
     const url=URL.createObjectURL(blob);
-    const a=document.createElement('a');a.href=url;a.download=`nova_export.${ext}`;a.click();
+    const baseName=origFileName.replace(/\.[^/.]+$/,'').replace(/[<>:"/\\|?*]/g,'_')||'nova_export';
+    const a=document.createElement('a');a.href=url;a.download=`${baseName}.${ext}`;a.click();
     setTimeout(()=>URL.revokeObjectURL(url),8000);
     bar.style.width='100%';lbl.textContent='✓ Downloaded!';
     showStatus(`✓ Berhasil didownload! (${(blob.size/1024/1024).toFixed(1)} MB)`,4000);
@@ -454,6 +455,7 @@ function encodeWAV(buf){
 }
 
 function loadFile(file){
+  origFileName=file.name;
   document.getElementById('fileTabs').style.display='block';
   document.getElementById('fileName').textContent=file.name.length>32?file.name.slice(0,32)+'...':file.name;
   document.getElementById('fileCount').textContent='1 file';
