@@ -10,8 +10,8 @@
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{font-family:'Inter',sans-serif;background:#f4f4f5;color:#111;min-height:100vh}
-    .app{max-width:680px;margin:0 auto;padding-bottom:48px}
-    .topbar{background:#fff;border-bottom:1px solid #e8e8e8;padding:13px 24px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .app{width:100%;padding-bottom:48px}
+    .topbar{background:#fff;border-bottom:1px solid #e8e8e8;padding:13px 32px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
     .logo{display:flex;align-items:center;gap:10px}
     .logo-sq{width:30px;height:30px;background:#16a34a;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
     .logo-sq svg{width:15px;height:15px;fill:#fff}
@@ -21,15 +21,15 @@
     .badge{font-size:10px;font-weight:600;padding:4px 10px;border-radius:20px;font-family:'JetBrains Mono',monospace}
     .badge.g{background:#dcfce7;border:1px solid #bbf7d0;color:#15803d}
     .badge.n{background:#f4f4f5;border:1px solid #e4e4e7;color:#a1a1aa}
-    .section{margin:16px 16px 0}
+    .section{margin:16px 32px 0}
     .drop-zone{border:2px dashed #e4e4e7;border-radius:20px;padding:44px 32px;text-align:center;cursor:pointer;background:#fff;transition:all .25s}
     .drop-zone:hover,.drop-zone.over{border-color:#16a34a;background:#f0fdf4}
     .drop-icon{width:56px;height:56px;border-radius:50%;background:#f0fdf4;border:1.5px solid #bbf7d0;display:flex;align-items:center;justify-content:center;margin:0 auto 14px}
     .drop-icon svg{width:22px;height:22px;fill:#16a34a}
     .drop-h{font-size:16px;font-weight:600;margin-bottom:6px}
     .drop-s{font-size:11px;color:#a1a1aa;font-family:'JetBrains Mono',monospace}
-    .status{margin:10px 16px 0;padding:9px 16px;border-radius:12px;font-size:11px;font-weight:600;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-family:'JetBrains Mono',monospace;display:none}
-    .file-chip-wrap{margin:12px 16px 0;display:none}
+    .status{margin:10px 32px 0;padding:9px 16px;border-radius:12px;font-size:11px;font-weight:600;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-family:'JetBrains Mono',monospace;display:none}
+    .file-chip-wrap{margin:12px 32px 0;display:none}
     .file-chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:20px;background:#f0fdf4;border:1px solid #bbf7d0;font-size:11px;font-weight:700;color:#15803d}
     .chip-x{cursor:pointer;color:#86efac;font-size:16px;transition:color .15s}
     .chip-x:hover{color:#dc2626}
@@ -97,7 +97,7 @@
     .ms{background:#fafafa;border:1px solid #f0f0f0;border-radius:10px;padding:10px;text-align:center}
     .msl{font-size:8px;font-weight:700;color:#888;letter-spacing:1.5px;text-transform:uppercase;font-family:'JetBrains Mono',monospace;margin-bottom:3px}
     .msv{font-size:14px;font-weight:700;color:#111}
-    .footer{margin:24px 16px 0;text-align:center;font-size:10px;color:#d4d4d8;font-family:'JetBrains Mono',monospace}
+    .footer{margin:24px 32px 0;text-align:center;font-size:10px;color:#d4d4d8;font-family:'JetBrains Mono',monospace}
   </style>
 </head>
 <body>
